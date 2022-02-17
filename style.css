@@ -1,0 +1,146 @@
+/* -------------Table of contents----------
+
+1. Typography
+2. Layouts
+3. Image-containers
+4. Buttons
+
+-----------------------------------------*/
+
+/* ================
+      CSS Reset
+    ===============*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --blue: hsl(184, 100%, 22%);
+  --green: hsl(179, 100%, 13%);
+  --white: hsl(0, 0%, 95%);
+
+  --lexend-deca: "Lexend Deca", sans-serif;
+  --big-shoulder: "Big Shoulders Display", cursive;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+html {
+  height: 100%;
+  font-size: 15px;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--white);
+}
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+/* ================
+      Layouts
+    ===============*/
+section {
+  width: 55%;
+}
+.section__row {
+  display: flex;
+}
+.section__col {
+  width: 100%;
+  padding: 2.5rem 0;
+  position: relative;
+}
+.section__col--orange {
+  background-color: var(--orange);
+  border-radius: 7px 0 0 7px;
+}
+
+.section__col--blue {
+  background-color: var(--blue);
+}
+.section__col--green {
+  background-color: var(--green);
+  border-radius: 0 7px 7px 0;
+}
+.footer {
+  position: relative;
+  top: 135px;
+}
+
+/* ================
+      Typography
+    ===============*/
+.section__title {
+  font-family: var(--big-shoulder);
+  color: var(--white);
+  margin: 2.5rem 0;
+  font-size: 2.5rem;
+}
+.section__desc {
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 9.5rem;
+  font-family: var(--lexend-deca);
+  line-height: 1.6;
+}
+.footer a {
+  color: var(--orange);
+}
+/* ================
+       Image-containers
+    ===============*/
+.section__img {
+  width: 30%;
+}
+/* ================
+      Buttons
+    ===============*/
+.btn {
+  background-color: var(--white);
+  border-radius: 100px;
+  font-family: var(--lexend-deca);
+  padding: 1em 2em;
+  display: inline-block;
+  text-decoration: none;
+  bottom: 2.5rem;
+  transition: all ease-out 0.5s;
+}
+.btn__orange {
+  color: var(--orange);
+  position: absolute;
+}
+.btn__orange:hover {
+  color: var(--white);
+  border: 2px solid var(--white);
+  background-color: var(--orange);
+}
+.btn__blue {
+  color: var(--blue);
+  position: absolute;
+}
+.btn__blue:hover {
+  color: var(--white);
+  border: 2px solid var(--white);
+  background-color: var(--blue);
+}
+.btn__green {
+  color: var(--green);
+  position: absolute;
+}
+.btn__green:hover {
+  color: var(--white);
+  border: 2px solid var(--white);
+  background-color: var(--green);
+}
