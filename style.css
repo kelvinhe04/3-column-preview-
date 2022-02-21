@@ -36,6 +36,7 @@ img {
 html {
   height: 100%;
   font-size: 15px;
+  width: 100%;
 }
 body {
   display: flex;
@@ -43,6 +44,7 @@ body {
   justify-content: center;
   flex-direction: column;
   height: 100%;
+  width: 100%;
   background-color: var(--white);
 }
 .container {
@@ -52,7 +54,7 @@ body {
 /* ================
       Layouts
     ===============*/
-section {
+.section {
   width: 55%;
 }
 .section__row {
@@ -119,7 +121,6 @@ section {
 }
 .btn__orange {
   color: var(--orange);
-  position: absolute;
 }
 .btn__orange:hover {
   color: var(--white);
@@ -128,7 +129,6 @@ section {
 }
 .btn__blue {
   color: var(--blue);
-  position: absolute;
 }
 .btn__blue:hover {
   color: var(--white);
@@ -137,10 +137,33 @@ section {
 }
 .btn__green {
   color: var(--green);
-  position: absolute;
 }
 .btn__green:hover {
   color: var(--white);
   border: 2px solid var(--white);
   background-color: var(--green);
+}
+@media (max-width: 1100px) {
+  body {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .section {
+    margin: 2rem 0;
+  }
+  .section__row {
+    flex-direction: column;
+  }
+  .footer {
+    top: 0px;
+  }
+  .section__desc {
+    margin-bottom: 2rem;
+  }
+  .section__col--orange {
+    border-radius: 7px 7px 0 0;
+  }
+  .section__col--green {
+    border-radius: 0 0 7px 7px;
+  }
 }
